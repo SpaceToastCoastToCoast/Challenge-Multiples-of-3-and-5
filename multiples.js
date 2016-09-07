@@ -11,14 +11,13 @@ exports.sumOfAMultiple = function( n ) {
   multiplesOfFive = (n - 1) / 5;
 
 
-  for(var i = 1; i <= multiplesOfThree; i++) {
-    if(i % 5 !== 0){
-      sum += (i * 3);
+  for(var i = 1; i < n; i++) {
+    if(i % 3 === 0){
+      sum += i;
     }
-  }
-
-  for(i = 1; i <= multiplesOfFive; i++) {
-    sum += (i * 5);
+    else if(i % 5 === 0){
+      sum += i;
+    }
   }
 
   return sum;
