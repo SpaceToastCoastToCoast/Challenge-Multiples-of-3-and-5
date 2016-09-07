@@ -7,6 +7,19 @@ exports.sumOfAMultiple = function( n ) {
   var sum = 0;
 
   // do your work here
+  multiplesOfThree = (n - 1) / 3;
+  multiplesOfFive = (n - 1) / 5;
+
+
+  for(var i = 1; i <= multiplesOfThree; i++) {
+    if(i % 5 !== 0){
+      sum += (i * 3);
+    }
+  }
+
+  for(i = 1; i <= multiplesOfFive; i++) {
+    sum += (i * 5);
+  }
 
   return sum;
 };
